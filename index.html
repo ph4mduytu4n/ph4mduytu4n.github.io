@@ -108,6 +108,23 @@ section>h2{font-size:clamp(26px,4vw,34px);margin:6px 0 28px}
 .contact p{max-width:52ch;color:var(--muted);margin:0 0 18px}
 footer{padding:26px 0 40px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
 
+.company{display:flex;gap:16px;align-items:center;margin-bottom:22px}
+.company h3{font-size:20px}
+.company .meta{margin:2px 0 0}
+.logo{width:52px;height:52px;border-radius:8px;background:var(--accent-soft);position:relative;flex:none;overflow:hidden}
+.logo i{position:absolute;bottom:0;background:var(--accent);opacity:.75}
+.logo i:first-child{left:10px;width:14px;height:22px}
+.logo i:last-child{left:24px;width:18px;height:34px;opacity:.45}
+.meta{margin:0;font-size:14px;color:var(--muted)}
+.roles{position:relative;margin-left:25px;padding-left:34px;border-left:3px solid var(--line)}
+.role-item{position:relative;margin-bottom:30px}
+.role-item::before{content:"";position:absolute;left:-42px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--signal);box-shadow:0 0 0 4px var(--bg)}
+.role-item h4{font-family:var(--display);font-size:18px;margin:0 0 3px;display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center}
+.role-item .tag{font-family:var(--mono);font-size:11px;font-weight:500;padding:2px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+.role-item ul:not(.chips){margin:14px 0 14px;padding-left:18px}
+.role-item li{margin-bottom:8px}
+.role-item .chips{margin-top:12px}
+
 /* Page switching and motion */
 .page{border-top:0;padding-top:36px;--dx:28px}
 .page.enter{animation:slidein .45s cubic-bezier(.2,.7,.2,1) both}
@@ -300,15 +317,29 @@ footer{padding:26px 0 40px;border-top:1px solid var(--line);font-size:13px;color
 <section id="experience" class="page">
   <p class="label">Work</p>
   <h2>Experience</h2>
-  <div class="job">
-    <div class="when">Jun 2025 – Jun 2026<br>Part-time</div>
+  <div class="company">
+    <div class="logo" aria-hidden="true"><i></i><i></i></div>
     <div>
-      <h3>Data Specialist, OSAS Joint Stock Company</h3>
-      <p>Data engineering and analytics, Ho Chi Minh City</p>
+      <h3>OSAS Joint Stock Company</h3>
+      <p class="meta">Part-time · 1 yr</p>
+    </div>
+  </div>
+  <div class="roles">
+    <div class="role-item">
+      <h4>Data Specialist</h4>
+      <p class="meta">Jan 2026 – Jun 2026 · 6 mos</p>
+      <p class="meta">Ho Chi Minh City, Vietnam · On-site</p>
       <ul>
-        <li><b>Insurance data warehouse (Oracle, ODI).</b> Worked from tickets: read the requirement, built or fixed the load, wrote reconciliation tests and returned the result. Traced missing data to a date-window mismatch between the staging extract and the load procedure, then reconciled source and target totals before handing over to the business analyst.</li>
+        <li><b>Insurance data warehouse (Oracle Database, Oracle Data Integrator).</b> Worked from tickets: read the requirement, built or fixed the load, wrote reconciliation tests and returned the result. Traced missing data to a date-window mismatch between the staging extract and the load procedure, then reconciled source and target totals before handing over to the business analyst.</li>
         <li><b>Public-sector database migration (SQL Server and MongoDB to Oracle 19c).</b> Wrote stored procedures and triggers for the sync, verified migrated tables against the sources and reported to the team lead weekly. Wrote the installation, configuration and migration guides.</li>
       </ul>
+      <ul class="chips"><li>Oracle Data Integrator (ODI)</li><li>Data Warehousing</li></ul>
+    </div>
+    <div class="role-item">
+      <h4>Data Analyst <span class="tag">Internship</span></h4>
+      <p class="meta">Jul 2025 – Dec 2025 · 6 mos</p>
+      <p class="meta">Ho Chi Minh City, Vietnam · Hybrid</p>
+      <ul class="chips"><li>SQL</li><li>Statistical Data Analysis</li></ul>
     </div>
   </div>
 </section>
